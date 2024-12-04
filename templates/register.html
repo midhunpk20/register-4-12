@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>welocome to register page</h1>
+    <br><br>
+    {% for message in messages %}
+    <p>{{ message }}</p>
+    {% endfor %}
+    
+    <form action="" method="post">
+        {% csrf_token %}
+        <label for="username">Username</label>
+        <input type="text" name="username"> <br><br>
+        <label for="email">Email</label>
+        <input type="email" name="email"> <br><br>
+        <label for="password1">password1</label>
+        <input type="text" name="password1"><br><br>
+        <label for="password2">password2</label>
+        <input type="text" name="password2">
+        <br><br>
+        <button type="submit">submit</button>
+
+    </form>
+
+    <br><br>
+    <a href="{% url 'user_login_link' %}">go to login page</a>
+</body>
+</html>

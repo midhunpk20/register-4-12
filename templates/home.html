@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>welocome to home page</h1><br>
+
+    <h3>{{user.username}}</h3><br>
+    <h3>{{user.email}}</h3>
+
+    <br><br>
+    <a href="{% url 'user_login_link'%}">go to login page</a>
+    <br><br>
+    <a href="{%url 'user_register_link'%}">go to register page</a>
+    <br><br>
+    <a href="{%url 'user_logout_link'%}">Logout</a>
+</body>
+</html>
